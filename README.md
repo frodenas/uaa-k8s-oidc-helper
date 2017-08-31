@@ -20,6 +20,18 @@ users:
         refresh-token: <REDACTED>
 ```
 
+## Table of Contents
+
+* [Installation](https://github.com/frodenas/uaa-k8s-oidc-helper#installation)
+* [Usage](https://github.com/frodenas/uaa-k8s-oidc-helper#usage)
+  * [Flags](https://github.com/frodenas/uaa-k8s-oidc-helper#flags)
+* [OpenID Connect Setup](https://github.com/frodenas/uaa-k8s-oidc-helper#openid-connect-setup)
+  * [Kubernetes](https://github.com/frodenas/uaa-k8s-oidc-helper#kubernetes)
+  * [UAA](https://github.com/frodenas/uaa-k8s-oidc-helper#uaa)
+* [Contributing](https://github.com/frodenas/uaa-k8s-oidc-helper#contributing)
+* [License](https://github.com/frodenas/uaa-k8s-oidc-helper#license)
+* [Acknowledgements](https://github.com/frodenas/uaa-k8s-oidc-helper#acknowledgements)
+
 ## Installation
 
 Using the standard `go install` (you must have [Go][golang] already installed in your local machine):
@@ -63,12 +75,12 @@ Remember that `<Your client ID>` must have an `openid` scope. If you're using an
 If the [UAA][uaa] server is using a self-signed certificate, add also the `CA` that signed the certificates:
 
 ```
---oidc-ca-file: <path to the CA file> \
+--oidc-ca-file=<path to the CA file> \
 ```
 
 If you're using an [UAA][uaa] server deployed as part of a [Cloud Foundry][cloudfoundry] deployment with self-signed certificates, remember that the certificate must explicitelly include the `uaa` hostname (ie a certificate for `*.example.com` does NOT include `uaa.system.example.com`, but a `*.system.example.com` is valid).
 
-Also remember to [authorize][k8s-authorization] users to be able to make requests to the the API server. 
+Also remember to [authorize][k8s-authorization] users to be able to make requests to the the API server:
 
 * If you are using the [ABAC][k8s-abac] authorization method, you can include all `system:authenticated` users to your authorization policy file:
 
