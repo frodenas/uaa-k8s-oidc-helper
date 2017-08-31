@@ -23,6 +23,8 @@ users:
 ## Table of Contents
 
 * [Installation](https://github.com/frodenas/uaa-k8s-oidc-helper#installation)
+  * [From source](https://github.com/frodenas/uaa-k8s-oidc-helper#from-source)
+  * [Docker](https://github.com/frodenas/uaa-k8s-oidc-helper#docker)
 * [Usage](https://github.com/frodenas/uaa-k8s-oidc-helper#usage)
   * [Flags](https://github.com/frodenas/uaa-k8s-oidc-helper#flags)
 * [OpenID Connect Setup](https://github.com/frodenas/uaa-k8s-oidc-helper#openid-connect-setup)
@@ -34,12 +36,21 @@ users:
 
 ## Installation
 
+### From source
+
 Using the standard `go install` (you must have [Go][golang] already installed in your local machine):
 
 ```bash
 $ go install github.com/frodenas/uaa-k8s-oidc-helper
 ```
 
+### Docker
+
+To run the helper inside a Docker container, run:
+
+```
+$ docker run --rm frodenas/uaa-k8s-oidc-helper <flags>
+```
 ## Usage
 
 ```bash
