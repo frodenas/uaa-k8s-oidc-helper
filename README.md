@@ -53,9 +53,11 @@ Refer to the [contributing guidelines][contributing].
 
 Apache License 2.0, see [LICENSE][license].
 
+## Acknowledgements
+
 This tool has heavily inspired by the [k8s-oidc-helper][k8s-oidc-helper].
 
-[contributing]: https://github.com/frodenas/stackdriver_exporter/blob/master/CONTRIBUTING.md
+[contributing]: https://github.com/frodenas/uaa-k8s-oidc-helper/blob/master/CONTRIBUTING.md
 [golang]: https://golang.org/
 [license]: https://github.com/frodenas/uaa-k8s-oidc-helper/blob/master/LICENSE
 [k8s-oidc]: https://kubernetes.io/docs/admin/authentication
