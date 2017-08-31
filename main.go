@@ -16,12 +16,12 @@ import (
 )
 
 var (
-	uaaURL               = flag.String("uaa.url", "", "Cloud Foundry UAA URL.")
-	uaaClientID          = flag.String("uaa.client_id", "cf", "Cloud Foundry UAA Client ID.")
-	uaaClientSecret      = flag.String("uaa.client_secret", "", "Cloud Foundry UAA Client Secret.")
-	uaaUsername          = flag.String("uaa.username", "", "Cloud Foundry Username.")
-	uaaPassword          = flag.String("uaa.password", "", "Cloud Foundry Password.")
-	uaaSkipSSLValidation = flag.Bool("uaa.skip_ssl_verify", false, "Disable SSL Verify.")
+	uaaURL               = flag.String("uaa.url", "", "UAA URL.")
+	uaaClientID          = flag.String("uaa.client_id", "cf", "UAA Client ID (must have an 'openid' scope).")
+	uaaClientSecret      = flag.String("uaa.client_secret", "", "UAA Client Secret.")
+	uaaUsername          = flag.String("uaa.username", "", "UAA Username to generate credentials for.")
+	uaaPassword          = flag.String("uaa.password", "", "UAA Password to generate credentials for.")
+	uaaSkipSSLValidation = flag.Bool("uaa.skip_ssl_verify", false, "Disable UAA SSL Verify.")
 )
 
 type OIDCInfo struct {
